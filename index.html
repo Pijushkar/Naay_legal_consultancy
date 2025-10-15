@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAAY Legal Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <nav>
+    <div class="nav-container">
+      <h1>NAAY Legal Consulting</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+   
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h2>Get your legal solution</h2>
+      <p>If you are facing any type of legal problem, click the consultation button and fill out the form. We will provide your solution.</p>
+      <button class="btn" id="openFormBtn">BOOK A CONSULTATION</button>
+    </div>
+    <div class="hero-right">
+      <img src="legal.png" alt="Justice Image">
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-left">
+      <img src="handshake.png" alt="Consultation Image">
+    </div>
+    <div class="about-right">
+      <div class="contact-banner">CONTACT NOW: 9647732608</div>
+      <h2>ABOUT LEGAL CONSULTING</h2>
+      <p>We have many qualified and experienced legal advisors who will give you solutions based on your problem.</p>
+      <p>You can inform us of your problem via message or call while filling out the form. Then we will provide the appropriate advisor to solve your problem.</p>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>TESTIMONIALS</h2>
+    <p class="sub">What our clients say about us</p>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>Legal Advisors are very good and very polite. I am happy after getting a solution.</p>
+        <h4>ANIL PAL</h4>
+      </div>
+      <div class="testimonial">
+        <p>They contacted me within a few minutes and provided a helpful solution.</p>
+        <h4>UTTAM ROY</h4>
+      </div>
+      <div class="testimonial">
+        <p>Providing consulting at a very low cost. I’m very thankful.</p>
+        <h4>HAJI RAHMAN</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-left">
+      <h2>CONTACT US TODAY</h2>
+      <p><strong>Call:</strong> 9647732608</p>
+      <p><strong>Email:</strong> asknaay@gmail.com</p>
+      <button class="btn" id="openFormBtn2">BOOK A CONSULTATION</button>
+    </div>
+    <div class="contact-right">
+      <img src="image1.png" alt="Consultation Meeting">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 NAAY Legal Consulting. All Rights Reserved.
+  </footer>
+  <a href="https://wa.me/919647732608" target="_blank" class="whatsapp-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdfRG0Hf0-aY238uymZdBW2WReVNx8SQCtm3nllS-apxjN5rQ/viewform?usp=header"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("formModal");
+    const openBtns = [document.getElementById("openFormBtn"), document.getElementById("openFormBtn2")];
+    const close = document.querySelector(".close");
+
+    openBtns.forEach(btn => {
+      btn.onclick = () => modal.style.display = "block";
+    });
+    close.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target === modal) modal.style.display = "none";
+    };
+  </script>
+</body>
+</html>
